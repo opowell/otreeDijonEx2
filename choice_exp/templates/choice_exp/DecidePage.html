@@ -1,0 +1,23 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block content %}
+
+      <div>
+         A. Price: {{player.priceA}}<br>
+          Quality: {{player.qualityA}}<br>
+          Size: {{player.sizeA}}<br>
+      </div>
+        <br>
+      <div>
+         B. Price: {{player.priceB}}<br>
+          Quality: {{player.qualityB}}<br>
+          Size: {{player.sizeB}}<br>
+      </div>
+
+    {% formfield player.choice label="Make a choice" %}
+
+    <p>{% next_button %}</p>
+
+{% endblock %}
+
