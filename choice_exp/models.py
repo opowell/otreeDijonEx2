@@ -13,10 +13,7 @@ class Constants(BaseConstants):
     players_per_group = None
     num_rounds = 2
 
-    options_a = ['small, regular, 50 EUR', 'small, regular, 50 EUR']
-    options_b = ['large, premium, 100 EUR', 'small, premium, 50 EUR']
-
-    choices = [
+    options = [
       [ # Round 1
          {
             "size": "small",
@@ -47,10 +44,6 @@ class Constants(BaseConstants):
 class Subsession(BaseSubsession):
     def creating_session(self):
         for p in self.get_players():
-            p.option_a = Constants.options_a[self.round_number - 1]
-            p.option_b = ...
-
-
             p.set_options()
 
 class Group(BaseGroup):
